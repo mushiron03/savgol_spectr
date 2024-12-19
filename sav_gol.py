@@ -139,7 +139,6 @@ if len(pokaz) == 2:
     colors = cmap(np.linspace(0, 1.0, pokaz[1] - pokaz[0] + 1))
     k = 0
 
-start_time = time()
 for i in df.columns:
     if i == 0: continue
     y1 = savitzky_golay(df.iloc[:, i], *savgol_param, state="Chinese")
